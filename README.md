@@ -6,6 +6,58 @@
 [Vim Help](https://www.cs.swarthmore.edu/oldhelp/vim/home.html)
 
 
+# Normal Mode
+
+
+
+Command      | Description 
+------------ | ------------- 
+.            | repeat 
+A            | $a 
+cw           | diw + i 
+cc           | dd + i
+o            | A<CR>
+O            | ko
+I            | ^i  
+
+
+
+Insert Mode
+
+
+
+Visual Mode
+
+
+# Copy and Paste (Register)
+
+Command      | Description 
+------------ | ------------- 
+yy           | copy a line 
+"ayy         | copy a line to register a
+"add         | delete a line and copy the line to register a
+"ap          | paste the line from register a
+yiw          | copy a word
+diw          | delete a word
+ciw          | delete a word and change to edit mode
+<Ctrl-r>ap   | paste the line from register a in edit mode
+  
+  
+Register      | Description 
+------------ | ------------- 
+"%           | current filename 
+"#           | previously used filename
+
+
+copy a line 
+
+
+n   | repeat forward search
+N   |  repeat backward
+\*   |  search for word currently under cursor
+
+
+
 # * Searching     
 
 ``` aaa ```
