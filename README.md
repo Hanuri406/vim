@@ -14,7 +14,7 @@ Command      | Description
 ?pattern   | search backward
 n   | repeat forward search
 N   |  repeat backward
-*   |  search for word currently under cursor
+\*   |  search for word currently under cursor
 
 
 
