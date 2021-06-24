@@ -1,11 +1,16 @@
-# vim
 
-```
-:set ignorecase
-:set smartcase
-```
-# * Searching
 
+[Vimdoc](http://vimdoc.sourceforge.net/htmldoc/options.html)
+
+
+[Vim Help](https://www.cs.swarthmore.edu/oldhelp/vim/home.html)
+
+
+# * Searching     
+
+``` aaa ```
+  
+  
 ## Pattern
 
 Command      | Description 
@@ -15,8 +20,6 @@ Command      | Description
 n   | repeat forward search
 N   |  repeat backward
 \*   |  search for word currently under cursor
-
-
 
 ## Case sensitivity
 
@@ -31,9 +34,21 @@ Command      | Description
 
 Command      | Description 
 ------------ | ------------- 
-/**pattern** | /\v\x\{6\}
-/\v**pattern** | very magic search - every following character except a-zA-Z0-9 and '\_' have special meaning /\v\x{6}
-/\V**pattern** | very nomagic search - every following character have no special meaning /Va.k.a
+/**pattern** | pattern matching
+/\v**pattern** | very magic search - every following character except a-zA-Z0-9 and '\_' have special meaning 
+/\V**pattern** | very nomagic search - every following character have no special meaning
+
+Command      | Example  
+------------ | ------------- 
+/#\x\\{3\\}\\.\x\\{2\\} |  ```#ABC.DE``` 
+/\v#\x{3}\\.\x{2} |  ```#ABC.DE``` 
+/\V#\x\\{3\\}.\x\\{2\\} |  ```#ABC.DE``` 
+/\v"[^"]+" | ```  "quoted words" ```
+/\v"\zs[^"]+\ze" | "```quoted words```"
+/\v<(\w+)\s+\1> | ```dup dup``` - duplicated words
+:%s/\v(%(And\|D)rew) (Neil)/\2 \1/g | Andrew Neil -> Neil Andrew    
+:%s/\v([0-9]+)/\=submatch(0)+1/gc | 123 -> 124
+
 
 
 
