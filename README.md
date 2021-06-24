@@ -6,11 +6,9 @@
 [Vim Help](https://www.cs.swarthmore.edu/oldhelp/vim/home.html)
 
 
-# Normal Mode
+## Normal Mode
 
 ![vim shortcut](/img.png) 
-
-
 
 Command      | Description 
 ------------ | ------------- 
@@ -21,16 +19,50 @@ cc           | dd + i
 o            | A<CR>
 O            | ko
 I            | ^i  
+\>            | tab
+zz           | scroll to the center
+gj           | down one display line
+gk           | up one display line
+  
 
+## Insert Mode 
 
+Command      | Description 
+------------ | ------------- 
+\<Ctrl-h>     | backspace 
+\<Ctrl-w>     | delete a word
+\<Ctrl-u>     | delete to the start of the line
+\<Ctrl-r>a    | insert reg a
+  
+## Replace mode
+  
 
-Insert Mode
+## Visual Mode
 
+  Command      | Description 
+------------ | ------------- 
+v           | character 
+V           | line
+\<Ctrl-v>    | block 
+gv          | re-select 
+  
+* <Ctrl-v> + A; + <Esc>
+* <Ctrl-v> + r + |
 
-
-Visual Mode
-
-
+## Command Mode
+  
+Command      | Description 
+------------ | ------------- 
+:[range]delete [x]           | copy the range to reg x and delete them
+:[range]yank [x]           | copy the range to reg x
+:[range]put [x]           | paste reg x
+:[range]copy {address}    | copy the range and paste to the address
+:[range]join              | merge the range 
+:[range]normal command | execute the command 
+:[range]s/pattern/string/flag | substitute 
+:[range]global/pattern/command | execute the command in the lines pattern matched
+  
+ 
 # Copy and Paste (Register)
 
 Command      | Description 
@@ -62,9 +94,7 @@ N   |  repeat backward
 
 # * Searching     
 
-``` aaa ```
-  
-  
+    
 ## Pattern
 
 Command      | Description 
