@@ -8,6 +8,8 @@
 
 # Normal Mode
 
+![vim shortcut](/img.png) 
+
 
 
 Command      | Description 
